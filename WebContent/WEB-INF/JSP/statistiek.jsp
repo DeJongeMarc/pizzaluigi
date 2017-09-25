@@ -10,6 +10,7 @@
 <body>
 	<c:import url='/WEB-INF/JSP/menu.jsp' />
 	<h1>Statistiek</h1>
+	<div>${aantalMandjes} mandje(s)</div> 
 	<dl>
 		<dt>Welkom</dt>
 		<dd>${indexRequests}</dd>

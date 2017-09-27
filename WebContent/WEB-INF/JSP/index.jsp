@@ -1,6 +1,7 @@
 <%-- Een welkom pagina --%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false"%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
+<%@taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt'%>
 <!DOCTYPE html">
 <html lang="nl">
 <head>
@@ -27,10 +28,20 @@
 			${zaakvoerder.adres.huisNr}<br> ${zaakvoerder.adres.postcode}
 			${zaakvoerder.adres.gemeente}
 		</dd>
+		<dt>Aantal pizza's verkocht</dt>
+		<dd>
+			<fmt:formatNumber value='${aantalPizzasVerkocht}' />
+		</dd>
 	</dl>
 	<div>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</div>
 	<div>
 		WebMaster: <a href='mailto:${emailAdresWebMaster}'>${emailAdresWebMaster}</a>
+	</div>
+	<fmt:parseDate value="${nu}" pattern="yyyy-MM-dd" var="nuAlsDate"
+		type="date" />
+	<div>
+		Vandaag:
+		<fmt:formatDate value='${nuAlsDate}' dateStyle='long' />
 	</div>
 </body>
 </html>

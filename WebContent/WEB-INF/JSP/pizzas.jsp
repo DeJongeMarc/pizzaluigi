@@ -1,15 +1,13 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false"%>
+<%@taglib uri='http://vdab.be/tags' prefix='vdab'%> 
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<title>Pizza's</title>
-<link rel='icon' href='images/favicon.ico'>
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<link rel='stylesheet' href='styles/default.css'>
+<vdab:head title="Pizza's"/>
 </head>
 <body>
-	<c:import url="/WEB-INF/JSP/menu.jsp" />
+	<vdab:menu/>
 	<h1>
 		Pizza's
 		<c:forEach begin="1" end="5">
